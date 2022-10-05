@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject[] levels;
 
-    // Update is called once per frame
-    void Update()
+    private GameObject _currentLevel;
+
+    public PlayerController PlayerController { get; private set; }
+
+    public void InstantiateLevel(int index)
     {
-        
+        if (_currentLevel)
+        {
+            Destroy(_currentLevel);
+        }
+
+        index = index % levels.Length;
+        _currentLevel = Instantiate(levels[index], transform);
+        PlayerController = _currentLevel.GetComponentInChildren<PlayerController>();
     }
 }

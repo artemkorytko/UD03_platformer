@@ -57,7 +57,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &5008174785200708663
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -86,6 +86,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9086fb36436442b842fc27e54394f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalSpeed: 5
+  jumpImpulse: 10
 --- !u!114 &-1325688063368227745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89015b4dc5728469fba49939d7d3f2be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startHealth: 3
 --- !u!1 &5008174785466359967
 GameObject:
   m_ObjectHideFlags: 0
