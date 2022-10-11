@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b9f8ec3645b070c46b3e7890797bafc9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -162,7 +162,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &8355404910378272208
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -191,6 +191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 253cb0f8e603a5441bd601f90e0f9823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalSpeed: 5
+  jumpImpulse: 6
 --- !u!114 &3397874500513370566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,3 +217,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39f224823a0184047bac2560537ff40a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startHealth: 3

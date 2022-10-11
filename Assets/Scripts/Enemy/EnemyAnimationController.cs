@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyAnimationController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private const string SPEED = "Speed";
+    private Animator _animator;
+
+    private static readonly int Speed = Animator.StringToHash(SPEED);
+
+    private void Awake()
     {
-        
+        _animator = GetComponentInChildren<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetSpeed(int value)
     {
-        
+        _animator.SetInteger(Speed,value);
     }
 }
